@@ -3,8 +3,8 @@
 
 #include "GameDie.h"
 #include <time.h>
- 
- 
+
+
 using namespace std;
 
 
@@ -22,6 +22,12 @@ int GameDie::roll()
 {
  srand (time(NULL));
 
+int a= rand()%20+1;
+// cout<<a<<endl;
+
+if(a>4)
+return rand()%a+1;
+else
 return rand()%6+1;
 
 }
