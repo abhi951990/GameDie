@@ -1,12 +1,27 @@
 #include <iostream>
 #include <cstdlib>
 
+#include "GameDie.h"
+#include <time.h>
+ 
+ 
+using namespace std;
+
+
 //class constructor that seeds the random number generator
 GameDie::GameDie()
 {
+
+cout<<roll()<<endl;
+
+
 }
 
 //generate a random number between 1-6 (inclusive) and display it
-void GameDie::roll()
+int GameDie::roll()
 {
+ srand (time(NULL));
+
+return rand()%6+1;
+
 }
